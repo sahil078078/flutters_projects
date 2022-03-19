@@ -12,13 +12,7 @@ void main() {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: const Text(
-              'Catelog App',
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.black,
-              ),
-            ),
+            title: const Text('Catelog App'),
           ),
           drawer: const MyDrawer(),
         ),
