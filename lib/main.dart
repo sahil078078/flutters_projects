@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutters_projects/Widgets/drawer.dart';
 import 'package:flutters_projects/Widgets/themes.dart';
+import 'package:flutters_projects/models/catelog.dart';
+
+import 'MyBodyDesign.dart';
 
 void main() {
+  const int days = 30;
+  const String name = 'Sahil';
   runApp(
     MaterialApp(
       themeMode: ThemeMode.light,
@@ -17,11 +22,7 @@ void main() {
           ),
         ),
         drawer: const MyDrawer(),
-        body: Container(
-          width: 100,
-          height: 100,
-          color: Colors.greenAccent,
-        ),
+        body: MyBody(),
       ),
     ),
   );
