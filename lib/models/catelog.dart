@@ -17,4 +17,14 @@ class Item {
   });
 }
 
-final products = [];
+final products = [
+  Item(
+    id: "iPhone1",
+    name: 'Apple iPhone1',
+    desc: 'Apple iPhone First Generation was launched in June 2007',
+    price: 15000,
+    color: '#33505a',
+    image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlNGA4_F60tUgj1NqGMcTrXozKwAF6kv6CHg&usqp=CAU',
+  )
+];

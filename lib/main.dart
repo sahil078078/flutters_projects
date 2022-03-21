@@ -9,12 +9,18 @@ void main() {
       theme: MyTheme.lightTheme,
       darkTheme: MyTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Catelog App'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'Catelog App',
+            style: TextStyle(color: Colors.black),
           ),
-          drawer: const MyDrawer(),
+        ),
+        drawer: const MyDrawer(),
+        body: Container(
+          width: 100,
+          height: 100,
+          color: Colors.greenAccent,
         ),
       ),
     ),
