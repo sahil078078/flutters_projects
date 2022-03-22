@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+
+import 'image_picker.dart';
 
 void main() {
-  runApp(const HomePage());
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyImagePicker(),
+    ),
+  );
 }
