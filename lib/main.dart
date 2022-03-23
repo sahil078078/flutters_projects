@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-
-import 'image_picker.dart';
+import 'package:flutters_projects/urk_launcher/whatsapp_url_launcher2.dart';
 
 void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyImagePicker(),
+      home: MyUrlLauncher2(),
     ),
   );
 }

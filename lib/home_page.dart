@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'MyBodyDesign.dart';
+import 'my_body_design.dart';
 import 'Widgets/drawer.dart';
 import 'Widgets/themes.dart';
 import 'dart:convert';
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     var catalogJson = await rootBundle.loadString('assets/files/catelog.json');
     var decodeData = jsonDecode(catalogJson);
     var productsData = decodeData["products"];
-    print(productsData);
+    // print(productsData);
   }
 
   @override
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         drawer: const MyDrawer(),
-        body: MyBody(),
+        body: const MyBody(),
       ),
     );
   }

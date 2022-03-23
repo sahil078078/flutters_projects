@@ -10,7 +10,6 @@ class MyImagePicker extends StatefulWidget {
 }
 
 class _MyImagePickerState extends State<MyImagePicker> {
-  @override
   XFile? selectedImage;
   ImagePicker imagePicker = ImagePicker();
 
@@ -30,6 +29,7 @@ class _MyImagePickerState extends State<MyImagePicker> {
     Navigator.pop(context);
   }
 
+  @override
   Widget build(BuildContext context) {
     showOption() {
       showModalBottomSheet(

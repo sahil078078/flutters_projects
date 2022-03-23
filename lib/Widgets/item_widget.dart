@@ -9,7 +9,7 @@ class ItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2.0,
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: ListTile(
@@ -25,7 +25,7 @@ class ItemWidget extends StatelessWidget {
             ),
           ),
           onTap: () {
-            print(item.name + ' Pressed');
+            // print(item.name + ' Pressed');
           },
         ),
       ),
