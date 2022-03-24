@@ -14,7 +14,7 @@ class _MyUrlLauncher4State extends State<MyUrlLauncher4> {
   TextEditingController myNumber = TextEditingController();
   final _myGloblaKey = GlobalKey<FormState>();
   List<Map<String, String>> myData = [
-    {"Name": "Home", "Phone": "+919724259878"}
+    {"Name": "Home", "Phone": "919724259878"}
   ];
 
   Widget build(BuildContext context) {
@@ -41,13 +41,15 @@ class _MyUrlLauncher4State extends State<MyUrlLauncher4> {
             itemBuilder: (context, index) {
               return ListTile(
                 leading: IconButton(
-                    onPressed: () {
-                      showOption(message: 'From Edit Button', indexed: index);
-                    },
-                    icon: const Icon(
-                      Icons.edit,
-                      size: 30,
-                    )),
+                  onPressed: () {
+                    print(myData[index]['Phone']);
+                    showOption(message: 'From Edit Button', indexed: index);
+                  },
+                  icon: const Icon(
+                    Icons.edit,
+                    size: 30,
+                  ),
+                ),
                 title: Text('${myData[index]['Name']}'),
                 subtitle: Text('${myData[index]["Phone"]}'),
                 trailing: SizedBox(
@@ -83,7 +85,8 @@ class _MyUrlLauncher4State extends State<MyUrlLauncher4> {
     print('Calling From $message');
     if (message == "From Edit Button") {
       myName.text = myData[indexed!]["Name"]!;
-      myNumber.text = myData[indexed]["Phone"]!;
+      // myNumber.text = myData[indexed]["Phone"]!;
+      myNumber.text = myData[indexed]["Phone"]!.substring(2, 12);
     } else {
       myName.text = '';
       myNumber.text = '';
@@ -154,12 +157,7 @@ class _MyUrlLauncher4State extends State<MyUrlLauncher4> {
 //                        if (value!.isEmpty) {}
                       },
                       decoration: InputDecoration(
-                        prefix: const Text(
-                          '+91',
-                          style: TextStyle(
-                            backgroundColor: Colors.black12,
-                          ),
-                        ),
+                        prefix: const Text('+91'),
                         hintText: '9727254585',
                         labelText: "Enter Mobile Number",
                         border: OutlineInputBorder(
@@ -204,7 +202,10 @@ class _MyUrlLauncher4State extends State<MyUrlLauncher4> {
                               if (message == "From Edit Button") {
                                 setState(() {
                                   myData[indexed!]['Name'] = myName.text;
-                                  myData[indexed]["Phone"] = myNumber.text;
+                                  myData[indexed]["Phone"] =
+                                      '91' + myNumber.text;
+                                  print(myData[indexed]['Name']);
+                                  print(myData[indexed]["Phone"]);
                                 });
                               } else {
                                 setState(() {
@@ -212,6 +213,8 @@ class _MyUrlLauncher4State extends State<MyUrlLauncher4> {
                                     "Name": myName.text,
                                     "Phone": "91" + myNumber.text,
                                   });
+                                  print(myName.text);
+                                  print(myNumber.text);
 
                                   myName.text = '';
                                   myNumber.text = '';
