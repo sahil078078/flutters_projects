@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutters_projects">
    <application
-        android:label="flutters_projects"
+        android:label="WsLauncher"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

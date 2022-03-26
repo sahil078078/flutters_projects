@@ -264,12 +264,3 @@ class _MyUrlLauncher4State extends State<MyUrlLauncher4> {
         phone: "${myData[callIndex]["Phone"]}", message: 'Hello Good Morning');
   }
 }
-
-class MyBodyDesign extends StatelessWidget {
-  const MyBodyDesign({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text('Hello');
-  }
-}
