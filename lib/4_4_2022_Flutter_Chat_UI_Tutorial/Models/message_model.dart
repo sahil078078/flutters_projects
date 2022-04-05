@@ -17,7 +17,7 @@ class Message {
 }
 
 final User currentUser = User(
-  id: 0,
+  id: 1, //0
   name: 'Current User',
   imageUrl: 'assets/images/man1.png',
 );
@@ -29,19 +29,19 @@ final User user1 = User(
 );
 
 final User user2 = User(
-  id: 2,
+  id: 0, //2
   name: 'Jerry',
   imageUrl: 'assets/images/man3.png',
 );
 
 final User user3 = User(
-  id: 3,
+  id: 0, //3
   name: 'Jack',
   imageUrl: 'assets/images/woman1.png',
 );
 
 final User user4 = User(
-  id: 4,
+  id: 1, //4
   name: 'Lisa',
   imageUrl: 'assets/images/woman2.png',
 );
